@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
         navSidebar.classList.toggle('open');
     });
 
-    // Change background-color of li on hover, to preview the color
+    // Change background-color of li on hover, to preview the corresponding color
     navListItems.forEach(item => {
         item.addEventListener('mouseover', function(event) {
             item.style.backgroundColor = item.textContent;
         });
     });
 
-    // Change background-color of li back to original color, after the hover event
+    // Change background-color of li back to original color, after the hover event ended
     navListItems.forEach(item => {
         item.addEventListener('mouseleave', function(event) {
             item.style.backgroundColor = '#666';
@@ -30,16 +30,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
             body.style.backgroundColor = item.textContent;
             navSidebar.classList.remove('open');
 
-            // Check the corresponding checkbox if page has its background
+            // Check corresponding checkbox of li if page has its background color
             navCheckboxes.forEach(checkbox => {
                 const liColor = checkbox.parentElement.textContent;
                 const bodyBackground = body.style.backgroundColor;
 
-                if (liColor === bodyBackground) {
-                    checkbox.checked = true;
-                } else {
-                    checkbox.checked = false;
-                }
+                if (liColor === bodyBackground) checkbox.checked = true;
+                else checkbox.checked = false;
             });
         });
     });
