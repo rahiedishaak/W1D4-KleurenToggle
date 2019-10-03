@@ -40,10 +40,6 @@ html {
 }
 
 .nav__item {
-    transition: .3s background-color;
-}
-
-.nav.open .nav__item {
     background-color: #666;
     padding: 1rem;
     border-bottom: 2px solid #fff;
@@ -54,6 +50,7 @@ html {
     font-weight: bold;
     letter-spacing: 2px;
     cursor: pointer;
+    transition: .3s background-color;
 }
 
 .nav__checkbox {
