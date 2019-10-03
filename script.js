@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     const navToggleIcon = document.querySelector('.toggler__icon');
     const navSidebar = document.querySelector('.nav');
     const navListItems = document.querySelectorAll('.nav__item');
+    const navCheckboxes = document.querySelectorAll('.nav__checkbox');
 
     // Toggle navigation
     navToggleIcon.addEventListener('click', function(event) {
@@ -28,6 +29,18 @@ document.addEventListener('DOMContentLoaded', function(event) {
         item.addEventListener('click', function(event) {
             body.style.backgroundColor = item.textContent;
             navSidebar.classList.remove('open');
+
+            // Check the corresponding checkbox if page has its background
+            navCheckboxes.forEach(checkbox => {
+                const liColor = checkbox.parentElement.textContent;
+                const bodyBackground = body.style.backgroundColor;
+
+                if (liColor === bodyBackground) {
+                    checkbox.checked = true;
+                } else {
+                    checkbox.checked = false;
+                }
+            });
         });
     });
 });

@@ -55,3 +55,7 @@ html {
     letter-spacing: 2px;
     cursor: pointer;
 }
+
+.nav__checkbox {
+    margin-right: .6rem;
+}
