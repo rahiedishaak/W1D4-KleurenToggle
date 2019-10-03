@@ -26,6 +26,27 @@ html {
     background-color: #ccc;
 }
 
+.nav.open {
+    width: 25rem;
+}
+
 .nav__items {
     display: none;
+}
+
+.nav.open .nav__items {
+    display: block;
+}
+
+.nav.open .nav__item {
+    background-color: #666;
+    padding: 1rem;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
 }
