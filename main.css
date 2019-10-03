@@ -24,6 +24,7 @@ html {
     width: 4.5rem;
     height: 93vh;
     background-color: #ccc;
+    transition: .1s all;
 }
 
 .nav.open {
@@ -36,6 +37,10 @@ html {
 
 .nav.open .nav__items {
     display: block;
+}
+
+.nav__item {
+    transition: .3s background-color;
 }
 
 .nav.open .nav__item {
